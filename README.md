@@ -1,5 +1,5 @@
 # docker-multiprojects
-
+```
 install docker
 install docker-compose
 
@@ -16,4 +16,5 @@ cd www
 git clone [project]
 mv [project] [name_folder]
 cd [name_folder]
-open docker: docker exec -ti php-fpm bash
+```
+**open docker:** `docker exec -ti php-fpm bash`
