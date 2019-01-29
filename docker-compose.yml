@@ -18,6 +18,7 @@ services:
         # nginx должен общаться с php контейнером
         links:
             - php
+        restart: always
     php:
         container_name: php-fpm
         # у нас свой образ для PHP, указываем путь к нему и говорим что его надо собрать
@@ -28,14 +29,16 @@ services:
         # монтируем директорию с проектами
         volumes:
             - ./www:/var/www
+        restart: always
     mysql:
         container_name: mysql
         image: mysql:5.7
         ports:
-            - "3306:3306"
+            - "3307:3306"
         volumes:
             - ./mysql:/var/lib/mysql
             - ./db/:/docker-entrypoint-initdb.d/
+        restart: always
         # задаем пароль для root пользователя
         environment:
             MYSQL_ROOT_PASSWORD: secret
