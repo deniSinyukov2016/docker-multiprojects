@@ -17,5 +17,5 @@ git clone [project]
 mv [project] [name_folder]
 cd [name_folder]
 ```
-**open docker:** `docker exec -ti php-fpm bash`
+**open docker bash:** `docker exec -ti php-fpm bash`
 **start docker** `docker-compose up -d`
