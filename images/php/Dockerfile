@@ -20,7 +20,7 @@ RUN docker-php-ext-install mbstring mysqli gd pdo_mysql pdo_pgsql soap xml zip c
 RUN apt-get install -y gnupg \
     && curl -sS https://getcomposer.org/installer -o composer-setup.php \
     && php composer-setup.php --install-dir=/usr/local/bin --filename=composer
-RUN curl -sS https://deb.nodesource.com/setup_8.x | bash - \
+RUN curl -sS https://deb.nodesource.com/setup_10.x | bash - \
     && apt-get install -y build-essential nodejs
 
 # Добавим свой php.ini, можем в нем определять свои значения конфига
